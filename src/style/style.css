@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  transition: 1s;
+}
+
+.light-theme {
+  --background-color: #f3f5fc;
+  --color: #0a3871;
+  --button-encrypt-background: #0a3871;
+  --button-decrypt-background: #d8dfe8;
+  --text: #495057;
+}
+
+.dark-theme {
+  --background-color: #0a3871;
+  --color: #f3f5fc;
+  --button-decrypt-background: #0a3871;
+  --button-encrypt-background: #d8dfe8;
+  --text: #fff;
+  --section-encrypt: #021227;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-color);
+}
