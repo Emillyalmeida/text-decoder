@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/5fe92a0230.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Decodificador de Texto</title>
+  </head>
+  <body>
+    <header>
+      <h1>E</h1>
+      <button>Mode</button>
+    </header>
+    <main>
+      <section>
+        <div>
+          <textarea
+            name="decodificar"
+            id="areaDecoder"
+            cols="30"
+            rows="10"
+            placeholder="Digite seu Texto"
+          ></textarea>
+          <span
+            ><i class="fa-solid fa-circle-info"></i> Apenas letras minúsculas e
+            sem acento.</span
+          >
+        </div>
+        <div>
+          <button id="encrypt">Criptografar</button>
+          <button id="decrypt">Descriptografar</button>
+        </div>
+      </section>
+      <section>
+        <div class="notMessage">
+          <img src="./src/img/imgNotmessage.svg" alt="sem mensagem" />
+          <div>
+            <h3>Nenhuma mensagem encontrada</h3>
+            <p>
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+        </div>
+        <div class="messageEncrypt notAppear">
+          <p></p>
+          <button id="copy">Copiar</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h3>Created by Emilly Almeida</h3>
+      <div>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"> git hub</i>
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
