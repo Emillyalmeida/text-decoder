@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/reset.css" />
+    <link rel="stylesheet" href="./src/style/style.css" />
     <script
       src="https://kit.fontawesome.com/5fe92a0230.js"
       crossorigin="anonymous"
     ></script>
     <title>Decodificador de Texto</title>
   </head>
-  <body>
+  <body class="light-theme">
     <header>
       <h1>E</h1>
-      <button>Mode</button>
+      <button><i class="fa-solid fa-moon"></i></button>
+      <!-- <i class="fa-solid fa-sun"></i> -->
     </header>
     <main>
-      <section>
-        <div>
+      <section class="section-area-to-encrypt">
+        <div class="area-text">
           <textarea
             name="decodificar"
             id="areaDecoder"
@@ -30,12 +33,12 @@
             sem acento.</span
           >
         </div>
-        <div>
+        <div class="buttons">
           <button id="encrypt">Criptografar</button>
           <button id="decrypt">Descriptografar</button>
         </div>
       </section>
-      <section>
+      <section class="section-area-encrypted">
         <div class="notMessage">
           <img src="./src/img/imgNotmessage.svg" alt="sem mensagem" />
           <div>

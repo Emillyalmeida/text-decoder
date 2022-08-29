@@ -24,4 +24,79 @@
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--background-color);
+  color: var(--color);
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  padding: 15px 5%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-style: italic;
+}
+
+.section-area-to-encrypt {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+}
+
+.section-area-to-encrypt .area-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  width: 90%;
+  gap: 10px;
+}
+
+.section-area-to-encrypt .area-text textarea {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--background-color);
+}
+
+.section-area-to-encrypt .area-text textarea::placeholder {
+  color: var(--color);
+  font-size: 1.25rem;
+  margin: 2px 0 0 3px;
+}
+
+.section-area-to-encrypt .area-text textarea:focus-visible {
+  border: 1px solid var(--color);
+}
+
+.section-area-to-encrypt .area-text span {
+  font-size: 0.75rem;
+  color: var(--text);
+}
+
+.section-area-to-encrypt .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-area-to-encrypt .buttons button {
+  width: 90%;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 22px;
+  background-color: var(--button-encrypt-background);
+  color: var(--background-color);
+  font-size: 16px;
+  border: none;
+}
+
+.section-area-to-encrypt .buttons button + button {
+  background-color: var(--background-color);
+  color: var(--color);
+  border: 1px solid var(--color);
 }
