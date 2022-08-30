@@ -43,6 +43,7 @@ const listenerButtonsEncrypt = (e) => {
 
     message.innerText = "";
     message.innerText = newString;
+    textArea.value = "";
 
     document.querySelector(".messageEncrypt").classList.remove("notAppear");
     document.querySelector(".notMessage").classList.add("notAppear");
@@ -51,5 +52,28 @@ const listenerButtonsEncrypt = (e) => {
   }
 };
 
+const CrtlC = () => {
+  navigator.clipboard.writeText(message.innerHTML);
+  message.innerText = "Nova messagem";
+};
+
+const changeTheme = () => {
+  const theme = document.body.classList[0];
+
+  if (theme === "light-theme") {
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+  }
+  btnColorMode.innerHTML = "";
+  theme === "light-theme"
+    ? (btnColorMode.innerHTML = '<i class="fa-solid fa-moon"></i>')
+    : (btnColorMode.innerHTML = '<i class="fa-solid fa-sun"></i>');
+};
+
 btnEncrypt.addEventListener("click", listenerButtonsEncrypt);
 btnDecrypt.addEventListener("click", listenerButtonsEncrypt);
+btnCopy.addEventListener("click", CrtlC);
+btnColorMode.addEventListener("click", changeTheme);
