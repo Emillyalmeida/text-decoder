@@ -4,6 +4,7 @@ const message = document.getElementById("message");
 const btnEncrypt = document.getElementById("encrypt");
 const btnDecrypt = document.getElementById("decrypt");
 const btnCopy = document.getElementById("copy");
+const btnClose = document.getElementById("close-info");
 
 const btnColorMode = document.querySelector("header button");
 
@@ -48,27 +49,28 @@ const listenerButtonsEncrypt = (e) => {
     document.querySelector(".messageEncrypt").classList.remove("notAppear");
     document.querySelector(".notMessage").classList.add("notAppear");
   } else {
-    alert("Digite um texto");
+    document.getElementById("info").classList.add("modal-info");
+    document.getElementById("info").classList.remove("notAppear");
   }
 };
 
 const CrtlC = () => {
   navigator.clipboard.writeText(message.innerHTML);
-  message.innerText = "Nova messagem";
+  message.innerText = "Nenhuma messagem";
 };
 
 const changeTheme = () => {
-  const theme = document.body.classList[0];
+  const themeBody = document.body.classList;
 
-  if (theme === "light-theme") {
-    document.body.classList.remove("light-theme");
-    document.body.classList.add("dark-theme");
+  if (themeBody[0] === "light-theme") {
+    themeBody.remove("light-theme");
+    themeBody.add("dark-theme");
   } else {
-    document.body.classList.add("light-theme");
-    document.body.classList.remove("dark-theme");
+    themeBody.add("light-theme");
+    themeBody.remove("dark-theme");
   }
   btnColorMode.innerHTML = "";
-  theme === "light-theme"
+  themeBody[0] === "light-theme"
     ? (btnColorMode.innerHTML = '<i class="fa-solid fa-moon"></i>')
     : (btnColorMode.innerHTML = '<i class="fa-solid fa-sun"></i>');
 };
@@ -77,3 +79,7 @@ btnEncrypt.addEventListener("click", listenerButtonsEncrypt);
 btnDecrypt.addEventListener("click", listenerButtonsEncrypt);
 btnCopy.addEventListener("click", CrtlC);
 btnColorMode.addEventListener("click", changeTheme);
+btnClose.addEventListener("click", () => {
+  document.getElementById("info").classList.add("notAppear");
+  document.getElementById("info").classList.remove("modal-info");
+});
