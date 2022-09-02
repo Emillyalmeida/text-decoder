@@ -10,7 +10,7 @@ const btnColorMode = document.querySelector("header button");
 
 const code = {
   e: "enter",
-  a: "ai",
+  a: "alq",
   i: "imes",
   o: "ober",
   u: "ufat",
